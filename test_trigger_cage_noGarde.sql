@@ -12,7 +12,6 @@ DELETE FROM LesMaladies WHERE nomA = 'pattenrond';
 DELETE FROM LesAnimaux WHERE nomA = 'pattenrond';
 DELETE FROM LesGardiens WHERE noCage = 89;
 DELETE FROM LesCages WHERE noCage = 88;
-DELETE FROM LesEmployes WHERE nomE = 'hermione';
 INSERT INTO LesEmployes VALUES ('hermione', 'angleterre');
 INSERT INTO LesGardiens VALUES (88, 'hermione');
 INSERT INTO LesCages VALUES (88, 'chat', 17);
