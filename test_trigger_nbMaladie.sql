@@ -2,7 +2,7 @@
 DELETE FROM LesAnimaux WHERE nomA = 'pattenrond';
 DELETE FROM LesCages WHERE noCage = 88;
 DELETE FROM LesMaladies WHERE nomA = 'pattenrond';
-DELETE FROM LesGardiens WHERE nomE = 'hermione';
+DELETE FROM LesGardiens WHERE noCage = 88;
 DELETE FROM LesEmployes WHERE nomE = 'hermione';
 INSERT INTO LesEmployes VALUES ('hermione', 'angleterre');
 INSERT INTO LesCages VALUES (88, 'flereur', 17);
@@ -17,7 +17,7 @@ COMMIT;
 DELETE FROM LesAnimaux WHERE nomA = 'pattenrond';
 DELETE FROM LesCages WHERE noCage = 88;
 DELETE FROM LesMaladies WHERE nomA = 'pattenrond';
-DELETE FROM LesGardiens WHERE nomE = 'hermione';
+DELETE FROM LesGardiens WHERE noCage = 88;
 DELETE FROM LesEmployes WHERE nomE = 'hermione';
 INSERT INTO LesEmployes VALUES ('hermione', 'angleterre');
 INSERT INTO LesCages VALUES (88, 'flereur', 17);
