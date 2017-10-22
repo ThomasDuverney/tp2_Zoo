@@ -1,4 +1,4 @@
-Question 1 
+/*Question 1 */
 
 CREATE OR REPLACE TRIGGER trigger_nb_maladie
   BEFORE INSERT OR DELETE ON LesMaladies
@@ -13,7 +13,7 @@ BEGIN
 END;
 /
 
-Question 2 
+/*Question 2 */
 
 CREATE OR REPLACE TRIGGER trigger_cage_fonction
   BEFORE INSERT OR UPDATE ON lesAnimaux
@@ -28,7 +28,7 @@ CREATE OR REPLACE TRIGGER trigger_cage_fonction
   END;
 /
 
-
+/*Question 3*/
 CREATE OR REPLACE TRIGGER trigger_cage_gardee
   BEFORE INSERT OR UPDATE ON lesAnimaux
   FOR EACH ROW  
