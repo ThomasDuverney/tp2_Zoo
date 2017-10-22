@@ -37,3 +37,4 @@ nb-configuration.xml
 *.jar
 *.war
 *.ear
+/tp2_Zoo/nbproject/private/
