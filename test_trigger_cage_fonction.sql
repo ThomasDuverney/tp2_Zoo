@@ -1,4 +1,6 @@
 /*Test du deuxième trigger avec un insert (trigger_cage_fonction)*/
+DELETE FROM LesMaladie WHERE nomA = 'pattenrond';
+DELETE FROM LesAnimaux WHERE nomA = 'pattenrond';
 DELETE FROM LesGardiens WHERE noCage = 88;
 DELETE FROM LesCages WHERE noCage = 88;
 DELETE FROM LesEmployes WHERE nomE = 'hermione';
@@ -9,6 +11,8 @@ INSERT INTO LesAnimaux VALUES ('pattenrond', 'male', 'chat', 'flereur', 'anglete
 COMMIT;
 
 /*Test du deuxième trigger avec un update (trigger_cage_fonction)*/
+DELETE FROM LesMaladie WHERE nomA = 'pattenrond';
+DELETE FROM LesAnimaux WHERE nomA = 'pattenrond';
 DELETE FROM LesGardiens WHERE noCage = 88;
 DELETE FROM LesCages WHERE noCage = 88;
 DELETE FROM LesEmployes WHERE nomE = 'hermione';
