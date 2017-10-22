@@ -10,7 +10,8 @@ public class squelette_appli {
 	
 	static final String USER = "duvernet";
 	static final String PASSWD = "duvernetBD";
-
+        static boolean condArret = true;
+        
 	static Connection conn; 
     public static void ajouterAnimal() throws SQLException {
             String nomA = LectureClavier.lireChaine("Nom de l'animal :");
@@ -33,9 +34,9 @@ public class squelette_appli {
     
     public static void afficherCages() throws SQLException {
             // code m�tier de la fonctionnalit�
-            int cage = LectureClavier.lireEntier("Numero de la cage : ");
+           /* int cage = LectureClavier.lireEntier("Numero de la cage : ");
             System.out.println("Fonction de la cage :");
-            String fonction = LectureClavier.lireChaine();
+            String fonction = LectureClavier.lireChaine();*/
 
             ResultSet rs = conn.prepareStatement("SELECT noCage FROM LesCages").executeQuery();
             while (rs.next()) {
@@ -101,7 +102,37 @@ public class squelette_appli {
             conn.setAutoCommit(false);
   	    System.out.println("Autocommit disabled");
            
-            deplacerAnimalCage();
+            
+            
+            while (condArret) {
+                System.out.println("Choisissez une fonction :"
+                        + "\n\t-f Changer la fonction d'une cage "
+                        + "\n\t-a Ajouter un animal "
+                        + "\n\t-m Changer un animal de cage."
+                        + "\n\t-c Afficher les cages "
+                        + "\n\t-q Quitter");
+                char choix = LectureClavier.lireChar("");
+                switch (choix) {
+                    case 'f':
+                        updateLesCages();
+                        break;
+                    case 'a':
+                        ajouterAnimal();
+                        break;
+                    case 'm':
+                        deplacerAnimalCage();
+                        break;
+                    case 'c':
+                        afficherCages();
+                        break;
+                    case 'q':
+                        condArret = false;
+                        break;
+                    default:
+                        System.out.println("Commande inconnu !");
+                        break;
+                }
+            }
             
             conn.close(); 
  	    
@@ -120,26 +151,4 @@ public class squelette_appli {
           }
      }
 }
-/*
-CREATE OR REPLACE TRIGGER trigger_nb_maladie
-  BEFORE INSERT OR DELETE ON LesMaladies
-  FOR EACH ROW
-BEGIN
-    IF INSERTING THEN
-        UPDATE LesAnimaux SET nb_maladies = nb_maladies + 1 WHERE nomA = :NEW.nomA;
-    END IF;
-    IF DELETING THEN
-        UPDATE LesAnimaux SET nb_maladies = nb_maladies - 1 WHERE nomA = :old.nomA;
-    END IF;
-END;
-/
 
-
-
-update LesAnimaux set noCage=2 where nomA = 'Milou';
-
-
-
-
-
-*/
