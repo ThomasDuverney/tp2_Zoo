@@ -18,7 +18,7 @@ DELETE FROM LesCages WHERE noCage = 88;
 DELETE FROM LesCages WHERE noCage = 89;
 DELETE FROM LesEmployes WHERE nomE = 'hermione';
 INSERT INTO LesEmployes VALUES ('hermione', 'angleterre');
-INSERT INTO LesCages VALUES (88, 'fleureur', 17);
+INSERT INTO LesCages VALUES (88, 'flereur', 17);
 INSERT INTO LesCages VALUES (89, 'gobelin', 17);
 INSERT INTO LesGardiens VALUES (88, 'hermione');
 INSERT INTO LesGardiens VALUES (89, 'hermione');
