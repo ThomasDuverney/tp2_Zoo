@@ -1,8 +1,9 @@
 /*Test du deuxième trigger avec un insert (trigger_cage_fonction)*/
 DELETE FROM LesMaladies WHERE nomA = 'pattenrond';
 DELETE FROM LesAnimaux WHERE nomA = 'pattenrond';
-DELETE FROM LesGardiens WHERE noCage = 88;
+DELETE FROM LesGardiens WHERE nomE = 'hermione';
 DELETE FROM LesCages WHERE noCage = 88;
+DELETE FROM LesEmployes WHERE nomE = 'hermione';
 INSERT INTO LesEmployes VALUES ('hermione', 'angleterre');
 INSERT INTO LesCages VALUES (88, 'gobelin', 17);
 INSERT INTO LesGardiens VALUES (88, 'hermione');
@@ -12,9 +13,10 @@ COMMIT;
 /*Test du deuxième trigger avec un update (trigger_cage_fonction)*/
 DELETE FROM LesMaladies WHERE nomA = 'pattenrond';
 DELETE FROM LesAnimaux WHERE nomA = 'pattenrond';
-DELETE FROM LesGardiens WHERE noCage = 88;
+DELETE FROM LesGardiens WHERE nomE = 'hermione';
 DELETE FROM LesCages WHERE noCage = 88;
 DELETE FROM LesCages WHERE noCage = 89;
+DELETE FROM LesEmployes WHERE nomE = 'hermione';
 INSERT INTO LesEmployes VALUES ('hermione', 'angleterre');
 INSERT INTO LesCages VALUES (88, 'chat', 17);
 INSERT INTO LesGardiens VALUES (88, 'hermione');
