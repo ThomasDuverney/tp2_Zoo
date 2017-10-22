@@ -1,4 +1,4 @@
-/*Test du premier trigger avec un insert (trigger_nb_maladie)*/
+
 DELETE FROM LesAnimaux WHERE nomA = 'pattenrond';
 DELETE FROM LesGardiens WHERE noCage = 88;
 DELETE FROM LesCages WHERE noCage = 88;
@@ -13,7 +13,7 @@ INSERT INTO LesMaladies VALUES ('pattenrond','grippe');
 SELECT * FROM LesAnimaux WHERE nomA = 'pattenrond';
 COMMIT;
 
-/*Test du premier trigger avec un delete (trigger_nb_maladie)*/
+
 DELETE FROM LesAnimaux WHERE nomA = 'pattenrond';
 DELETE FROM LesGardiens WHERE noCage = 88;
 DELETE FROM LesCages WHERE noCage = 88;
