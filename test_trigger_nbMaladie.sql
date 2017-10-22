@@ -1,7 +1,6 @@
-
+DELETE FROM LesMaladies WHERE nomA = 'pattenrond';
 DELETE FROM LesGardiens WHERE noCage = 88;
 DELETE FROM LesCages WHERE noCage = 88;
-DELETE FROM LesMaladies WHERE nomA = 'pattenrond';
 DELETE FROM LesEmployes WHERE nomE = 'hermione';
 INSERT INTO LesEmployes VALUES ('hermione', 'angleterre');
 INSERT INTO LesCages VALUES (88, 'flereur', 10);
@@ -12,10 +11,9 @@ INSERT INTO LesMaladies VALUES ('pattenrond','grippe');
 SELECT * FROM LesAnimaux WHERE nomA = 'pattenrond';
 COMMIT;
 
-
+DELETE FROM LesMaladies WHERE nomA = 'pattenrond';
 DELETE FROM LesGardiens WHERE noCage = 88;
 DELETE FROM LesCages WHERE noCage = 88;
-DELETE FROM LesMaladies WHERE nomA = 'pattenrond';
 DELETE FROM LesEmployes WHERE nomE = 'hermione';
 INSERT INTO LesEmployes VALUES ('hermione', 'angleterre');
 INSERT INTO LesCages VALUES (88, 'flereur', 10);
