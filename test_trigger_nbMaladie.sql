@@ -1,4 +1,5 @@
 DELETE FROM LesMaladies WHERE nomA = 'pattenrond';
+DELETE FROM LesAnimaux WHERE nomA = 'pattenrond';
 DELETE FROM LesGardiens WHERE noCage = 88;
 DELETE FROM LesCages WHERE noCage = 88;
 DELETE FROM LesEmployes WHERE nomE = 'hermione';
@@ -12,6 +13,7 @@ SELECT * FROM LesAnimaux WHERE nomA = 'pattenrond';
 COMMIT;
 
 DELETE FROM LesMaladies WHERE nomA = 'pattenrond';
+DELETE FROM LesAnimaux WHERE nomA = 'pattenrond';
 DELETE FROM LesGardiens WHERE noCage = 88;
 DELETE FROM LesCages WHERE noCage = 88;
 DELETE FROM LesEmployes WHERE nomE = 'hermione';
