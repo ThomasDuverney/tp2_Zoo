@@ -1,0 +1,21 @@
+Question 1 
+
+CREATE OR REPLACE TRIGGER trigger_nb_maladie
+  BEFORE INSERT OR DELETE ON LesMaladies
+  FOR EACH ROW
+BEGIN
+    IF INSERTING THEN
+        UPDATE LesAnimaux SET nb_maladies = nb_maladies + 1 WHERE nomA = :NEW.nomA;
+    END IF;
+    IF DELETING THEN
+        UPDATE LesAnimaux SET nb_maladies = nb_maladies - 1 WHERE nomA = :old.nomA;
+    END IF;
+END;
+/
+
+Question 2 
+
+BEFORE INSERT OR UPDATE ON LesAnimaux
+FOR EACH ROW
+BEGIN
+    SELECT fonction INTO fonc from LesCages
